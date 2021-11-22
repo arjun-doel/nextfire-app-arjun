@@ -19,7 +19,11 @@ export default function Enter() {
 
 function SignInButton() {
   const signInWithGoogle = async () => {
-    await auth.signInWithPopup(googleAuthProvider)
+    try {
+      await auth.signInWithPopup(googleAuthProvider)
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   return (
