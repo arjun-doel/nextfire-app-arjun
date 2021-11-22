@@ -1,11 +1,11 @@
 /* eslint-disable @next/next/link-passhref */
 import Link from 'next/link'
-import Image from 'next/image'
+import { UserContext } from '../libs/context';
+import { useContext } from 'react';
 
 export default function Navbar() {
 
-  const user = false;
-  const username = false;
+  const { user, username } = useContext(UserContext)
 
 
   return (
@@ -27,7 +27,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link href={`/${username}`}>
-                <Image src={user?.photoURL} alt="profile-pic"/>
+                <img src={user?.photoURL} alt="profile-pic"/>
               </Link>
             </li>
           </>

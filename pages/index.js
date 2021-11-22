@@ -7,7 +7,7 @@ import toast from 'react-hot-toast'
 export default function Home() {
   return (
     <div >
-      <button onClick={() => toast.success('yo mum')}>Toast me</button>
+      {/* <button onClick={() => toast.success('yo mum')}>Toast me</button> */}
     </div>
   )
 }
