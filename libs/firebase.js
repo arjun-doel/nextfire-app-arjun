@@ -35,3 +35,5 @@ export async function getUserWithUsername(username) {
   const userDoc = (await query.get()).docs[0];
   return userDoc;
 }
+
+export const fromMillis = firebase.firestore.Timestamp.fromMillis;
